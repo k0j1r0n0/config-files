@@ -1,0 +1,239 @@
+/*
+1. Visual Studio Codeの拡張機能「Markdown Preview Github Styling」をインストール
+2. /Users/ユーザー名/.vscode/extensions/bierner.markdown-preview-github-styles-XXX（XXXはバージョン）配下のbase.cssをこのファイルで置き換える
+*/
+
+body {
+    background: whitesmoke;
+}
+
+.vscode-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.vscode-body blockquote {
+    background-color: initial;
+}
+
+.vscode-body pre {
+    color: initial;
+    background: #f7f7f7 !important;
+}
+
+.vscode-body code {
+    color: inherit;
+}
+
+.vscode-body pre code {
+    color: initial;
+}
+
+.vscode-body code > div {
+    background: none
+}
+
+.vscode-body table th,
+.vscode-body table td {
+    border: 1px solid #ddd !important;
+}
+
+.vscode-body.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-body.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-body.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-body p,
+.vscode-body blockquote,
+.vscode-body dl,
+.vscode-body pre {
+    font-size: 13pt;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* 順序付きリストの設定 */
+.vscode-body ol {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13pt;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* 順不同リストの設定 */
+.vscode-body ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+body.vscode-body::-webkit-scrollbar {
+    background-color: white;
+}
+body.vscode-body::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+}
+body.vscode-body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+table thead th {
+    background: #4682B4;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+}
+    
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    padding: 0.3em;
+    background: #8ba7fa;
+    color: white;
+    text-shadow: 1px 2px 3px #505050;
+}
+
+h2 { 
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+h2:after {
+	content: "";
+	display: block;
+	height: 5px;
+	background: linear-gradient(to right, #5472cd, #c3defd);
+}
+
+
+h3{
+    color: #444;
+    font-size: 24px;
+    position: relative;
+    padding: 0 0 2px 32px;
+    border-bottom: 1px solid #888;
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #d14;
+      margin: auto;
+    }
+    &:before{
+      top: -6px;
+      left: 0px;
+    }
+    &:after{
+      top: 6px;
+      left: 6px;
+    }
+}
+h3::before, h3::after{
+	content: "□";
+	position: absolute;
+}
+h3::before{
+	left:0;
+	top:-3px;
+}
+h3::after{
+	left: 5px;
+	top: 3px;
+	color: #A1B8D1;
+}
+
+h4 { 
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: solid 3px black;
+}
+
+
+/* Original Settings */
+/*
+body {
+    background: white;
+}
+
+.vscode-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid transparent;
+}
+
+.vscode-body blockquote {
+    background-color: initial;
+}
+
+.vscode-body pre {
+    color: initial;
+    background: #f7f7f7 !important;
+}
+
+.vscode-body code {
+    color: inherit;
+}
+
+.vscode-body pre code {
+    color: initial;
+}
+
+.vscode-body code > div {
+    background: none
+}
+
+.vscode-body table th,
+.vscode-body table td {
+    border: 1px solid #ddd !important;
+}
+
+.vscode-body.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-body.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-body.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-body p,
+.vscode-body blockquote,
+.vscode-body ul,
+.vscode-body ol,
+.vscode-body dl,
+.vscode-body table,
+.vscode-body pre {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+body.vscode-body::-webkit-scrollbar {
+    background-color: white;
+}
+body.vscode-body::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+}
+body.vscode-body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+}
+*/
